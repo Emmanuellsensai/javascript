@@ -1,7 +1,7 @@
 //HELLO WORLD IN JAVASCRIPT
-alert('hello, world');
-console.log(1);
-console.log(2);
+// alert('hello, world');
+// console.log(1);
+// console.log(2);
 
 //VARIABLES IN JAVASCRIPT
 // let age = 25;
@@ -17,7 +17,7 @@ console.log(2);
 
 
 //STRINGS IN JAVASCRIPT
-console.log("hello, world");
+// console.log("hello, world");
 
 // let email = "emmauelusang60@gmail.com"
 // console.log(email)
@@ -48,7 +48,7 @@ console.log("hello, world");
 // console.log(radius, pi)
 
 //MATHS OPERATIONS
-console.log(10 / 2);
+// console.log(10 / 2);
 
 // let result = radius % 3;
 // let result = pi * radius ** 2;
@@ -101,7 +101,7 @@ console.log(10 / 2);
 // console.log(result)
 
 //COMPARISON OPERATOR
-let age = 25;
+// let age = 25;
 // console.log(age == 25);
 // console.log(age == 30);
 // console.log(age != 30);
@@ -109,7 +109,7 @@ let age = 25;
 // console.log(age < 20);
 // console.log(age <= 25);
 
-let name = "shaun"
+// let name = "shaun"
 // console.log(name == "shaun");
 // console.log(name == "Shuan");
 // console.log(name > "crystal");
@@ -130,10 +130,10 @@ let name = "shaun"
 // console.log(age !== "25");
 
 //TYPE CONVERSION
-let score = "100"
+// let score = "100"
 // score = Number(score)
-console.log(typeof score);
-console.log(score + 1)
+// console.log(typeof score);
+// console.log(score + 1)
 
 // let result = Number("Hello");
 // let result = String(500);
@@ -147,3 +147,18 @@ console.log(score + 1)
 // console.log(result)
 
 
+const ul = document.querySelector(".people");
+
+const people = ["emmanuel", "ryzen", "bryan", "daniel", "david"];
+
+let html = ``;
+
+people.forEach(function(person){
+
+    html += `<li style="color:purple">${person}<li/>`;
+
+});
+console.log(people.length)
+console.log(html);
+
+ul.innerHTML = html;

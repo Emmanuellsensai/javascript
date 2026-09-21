@@ -47,6 +47,8 @@ function nairaToUsd(amount) {
     return result
 }
 
+nairaToUsd(1000);
+
 function usdToNaira(amount) {
     let result = amount * NAIRA_PER_USD
     return result

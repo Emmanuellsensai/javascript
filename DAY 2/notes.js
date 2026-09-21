@@ -50,7 +50,7 @@
 //     console.log("That's alot of ninjas")
 // }
 
-// const password = "password1234";
+const password = "password1234";
 
 // if (password.length >= 12) {
 //     console.log("Password is strong enough")
