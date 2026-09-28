@@ -20,7 +20,7 @@
 // console.log(year(2004))
 
 
-const vals = [1, 2, 3, 4, 5, "a", "b", "c", "d", "e"]
+const vals = [1, 2, 3, 4, 5, "a", "b", "c", "a", "d", "e"]
 
 
 //FOR EACH METHOD - Loops through an array and logs each value per iteration.
@@ -87,4 +87,13 @@ const IndexOfA = vals.findIndex((item)=>{
 console.log(IndexOfA)
 
 
-//
+//INDEXOF METHOD- index of doesn't need a callback function and let's you take in a 2nd parameter which is a StartIndex...
+
+const letterA = vals.indexOf("a");
+console.log(letterA);
+
+//LASTINDEXOF METHOD- This gets the index of the last instance of an item in an array
+const letterA2 = vals.lastIndexOf("a");
+console.log(letterA2)
+
+//SUM METHOD - 
