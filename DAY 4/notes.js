@@ -227,3 +227,62 @@ const str = "1234"
 
 const numz = Array.from(str);
 console.log(numz);
+
+//To get the array a numbers we can use the map function, where the method collects 2 parameters.
+const Actualnumz = Array.from(str, (elements) => {
+    return Number(elements)
+
+});
+console.log(Actualnumz);
+
+
+//ISARRAY METHOD - returns true when a value is an array 
+const str1 = "1234"
+console.log(Array.isArray(str1));
+
+const obj1 = {foo:123}
+console.log(Array.isArray(obj1));
+
+let vals10 = [1, 2, 3, 4, 5, "a", "b", "c", "a", "d", "e"]
+console.log(Array.isArray(vals10));
+
+
+//VALUEOF METHOD - Takes in a parameter and returns a copy of the array with no changes.
+const val11 = vals10.valueOf();
+console.log(val11);
+
+
+//ENTRIES METHOD - Is used in an Array to get the entries that returns a new iterator Array that contains the key: value pairs for each elements in the array.
+vals10 = [1, 2, 3, 4, 5, "a", "b", "c", "a", "d", "e"]
+
+const eachEl = vals10.entries();
+for (let element of eachEl) {
+    console.log(element);
+};
+
+
+//KEYS METHOD - returns a new iterator Array that logs the keys of an Array.
+const eachKey = vals10.keys();
+for (let key of eachKey) {
+    console.log(key);
+};
+
+
+//VALUES METHODS - returns a new iterator Array that logs the values of an Array.
+const eachVal = vals10.values();
+for(let val of eachVal) {
+    console.log(val)
+}
+
+
+//REDUCE METHOD - Is used to reduce the array elements into 1 single value by adding them.
+
+const reducer = (previousValue,currentValue) => {
+    return previousValue + currentValue
+}
+
+const sum = normDigits.reduce(reducer);
+console.log(sum)
+
+
+//
