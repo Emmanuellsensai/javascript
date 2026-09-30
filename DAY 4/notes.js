@@ -2,7 +2,7 @@
 //Using Arrow Function is the conventional way.
 
 // const names = (parameter) => {
-//     //code
+//code
 //     return "something" + parameter
 // };
 
@@ -190,7 +190,7 @@ console.log(resliced);
 //SPLICE METHOD - removes and replaces element(s) in an array, takes in 3+ parameters (startindex,deletecount,items)
 const months = ["jan", "febuary", "march", "april"];
 
-months.splice(0, 2, "january", "september");
+// months.splice(0, 2, "january", "september");
 const month1 = months.splice(0, 1, "december")
 
 console.log(months);
@@ -240,7 +240,7 @@ console.log(Actualnumz);
 const str1 = "1234"
 console.log(Array.isArray(str1));
 
-const obj1 = {foo:123}
+const obj1 = { foo: 123 }
 console.log(Array.isArray(obj1));
 
 let vals10 = [1, 2, 3, 4, 5, "a", "b", "c", "a", "d", "e"]
@@ -270,14 +270,15 @@ for (let key of eachKey) {
 
 //VALUES METHODS - returns a new iterator Array that logs the values of an Array.
 const eachVal = vals10.values();
-for(let val of eachVal) {
+for (let val of eachVal) {
     console.log(val)
 }
 
 
-//REDUCE METHOD - Is used to reduce the array elements into 1 single value by adding them.
+//REDUCE METHOD - Is used to reduce the array elements into 1 single value by adding them. starting left to right
+//REDUCE RIGHT METHOD - Is used to reduce the array elements into 1 single value by adding them. starting right to left
 
-const reducer = (previousValue,currentValue) => {
+const reducer = (previousValue, currentValue) => {
     return previousValue + currentValue
 }
 
@@ -285,4 +286,8 @@ const sum = normDigits.reduce(reducer);
 console.log(sum)
 
 
-//
+//FLAT METHOD - Is used to flatten an array,motly for a multidimensional arrays, sepcifying the depth shows how many times it should flatten but default is 1.
+const mutidime = [1, 2, 3, [4, [5, [6]]]]
+
+console.log(mutidime.flat(1));
+
