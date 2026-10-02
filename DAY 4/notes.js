@@ -108,11 +108,7 @@ console.log(hasC);
 
 
 //EVERY METHOD - Every returns true if every item in an array satisfies a condition else returns false.
-const everyIs = vals.every((item) => {
-    if (typeof item === "number" || "string") {
-        return item
-    }
-})
+const everyIs = vals.every((item) => typeof item === "number" || "string");
 console.log(everyIs);
 
 
