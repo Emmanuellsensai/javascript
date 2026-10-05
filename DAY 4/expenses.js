@@ -29,8 +29,14 @@ console.log(expenses)
 //Q3 REDUCE
 function totalSpent(list) {
     const reducer = (previousValue, currentValue) => {
-        return previousValue + currentValue
+        return previousValue + currentValue.amount
     }
-    const sum = list.reduce((reducer)=>);
+    return list.reduce(reducer, 0)
 }
 console.log(totalSpent(expenses))
+
+//Q4 FILTER
+function byCategory(list, category) {
+    return list.filter((item) => item.category === "daily")
+}
+console.log(byCategory(expenses, "daily"))
