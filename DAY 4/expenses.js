@@ -40,3 +40,26 @@ function byCategory(list, category) {
     return list.filter((item) => item.category === "daily")
 }
 console.log(byCategory(expenses, "daily"))
+
+
+//Q5 REDUCE
+function biggestExpense(list) {
+    return list.reduce((biggest, current) => current.amount > biggest.amount ? current : biggest, list[0])
+}
+console.log(biggestExpense(expenses))
+
+
+//Q6 SOME 
+function hasExpensiveItem(list, limit) {
+    return list.some((item) => item.amount > limit);
+}
+console.log(hasExpensiveItem(expenses, 500000))
+
+
+//Q7 SORT
+function sortedByAmount(list) {
+    return list.slice().sort((a, b) => {
+        return a.amount - b.amount
+    })
+}
+console.log(sortedByAmount(expenses))
