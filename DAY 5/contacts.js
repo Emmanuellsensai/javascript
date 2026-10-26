@@ -9,15 +9,25 @@ function addContact(list, contact) {
 }
 
 function findByName(list, name) {
-    return list.find
+    return list.find(c => c.name.toLowerCase() === name.toLowerCase());
 }
 
-function updateContacts(list, id, changes) {
-    return
+function updateContact(list, id, changes) {
+    return list.map(c => {
+        if (c.id === id) {
+            return { ...c, ...changes }
+        }
+        return c
+    })
 }
 
 function deleteContact(list, id) {
-    return
+    return list.filter(c => c.id !== id);
 }
 
-console.log()
+console.log(findByName(contact, "BOLA"))
+const added = addContact(contact, { id: 4, name: "Deji", phone: "08098765432" });
+const updated = updateContact(contact, 1, { phone: "08001234567" });
+const removed = deleteContact(contact, 2);
+console.log(contact);
+console.log(added)
